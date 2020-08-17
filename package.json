@@ -9,6 +9,7 @@
 	"author": "@Manueleitor",
 	"license": "ISC",
 	"dependencies": {
-		"mongodb": "^3.6.0"
+		"mongodb": "^3.6.0",
+		"node-fetch": "^2.6.0"
 	}
 }

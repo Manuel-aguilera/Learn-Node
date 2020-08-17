@@ -1,5 +1,5 @@
 // Importamos la librería de mongo
-const { MongoClient, connect } = require("mongodb");
+const { MongoClient } = require("mongodb");
 // Database
 const dbName = "crimenes";
 // URL connection
