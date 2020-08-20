@@ -2,7 +2,7 @@
 	"name": "nodejs",
 	"version": "1.0.0",
 	"description": "Curso de platzi con NodeJs",
-	"main": "",
+	"main": "index.js",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
@@ -11,5 +11,8 @@
 	"dependencies": {
 		"mongodb": "^3.6.0",
 		"node-fetch": "^2.6.0"
+	},
+	"eslintConfig": {
+		"extends": "react-app"
 	}
 }
