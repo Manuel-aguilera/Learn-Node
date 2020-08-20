@@ -2,7 +2,7 @@ const fetch = require("node-fetch");
 
 const valores = {
 	numInicio: 1,
-	numFin: 50,
+	numFin: 1,
 	// token: "5590467b-8836-4649-a619-9a6f01f1a0c5",
 	token: "a48c00bf-3ff5-4d18-ba25-7e7728e65664",
 	proxy: "https://cors-anywhere.herokuapp.com/",
@@ -36,35 +36,24 @@ const obtenerData = async (inicio = 16, fin = 16) => {
 			console.log(error);
 		}
 	}
+	// console.log(data);
 	return data;
 };
+
+const pruebaData = async () => {
+	console.log("Empezamos el programa");
+	await obtenerData();
+	console.log("Terminamos el programa");
+};
+
+console.log("Llamamos a pruebaData()");
+pruebaData();
+console.log("Termina pruebaData()");
 
 const clean = (cadena) => {
 	const regex = /\//gi;
 	return cadena.replace(regex, "");
 };
-
-// CP: "20199";
-// Calle: "PANAL";
-// Clase_actividad: "Comercio al por menor en tiendas de abarrotes, ultramarinos y misceláneas";
-// Colonia: "MUNICIPIO LIBRE";
-// Correo_e: "";
-// Estrato: "0 a 5 personas";
-// Id: "8063";
-// Latitud: "21.89669022";
-// Longitud: "-102.26151149";
-// Nombre: "ABARROTES ALE";
-// Num_Exterior: "110";
-// Num_Interior: "0";
-// Razon_social: "";
-// Sitio_internet: "";
-// Telefono: "";
-// Tipo: "Fijo";
-// Tipo_vialidad: "CALLE";
-// Ubicacion: "AGUASCALIENTES, Aguascalientes, AGUASCALIENTES";
-// nom_corredor_industrial: "";
-// numero_local: "";
-// tipo_corredor_industrial: "";
 
 module.exports = async (numInicio, numFin) => {
 	const locales = await obtenerData(numInicio, numFin);
@@ -92,3 +81,25 @@ module.exports = async (numInicio, numFin) => {
 	});
 	return Data;
 };
+
+// CP: "20199";
+// Calle: "PANAL";
+// Clase_actividad: "Comercio al por menor en tiendas de abarrotes, ultramarinos y misceláneas";
+// Colonia: "MUNICIPIO LIBRE";
+// Correo_e: "";
+// Estrato: "0 a 5 personas";
+// Id: "8063";
+// Latitud: "21.89669022";
+// Longitud: "-102.26151149";
+// Nombre: "ABARROTES ALE";
+// Num_Exterior: "110";
+// Num_Interior: "0";
+// Razon_social: "";
+// Sitio_internet: "";
+// Telefono: "";
+// Tipo: "Fijo";
+// Tipo_vialidad: "CALLE";
+// Ubicacion: "AGUASCALIENTES, Aguascalientes, AGUASCALIENTES";
+// nom_corredor_industrial: "";
+// numero_local: "";
+// tipo_corredor_industrial: "";
