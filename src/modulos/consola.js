@@ -40,7 +40,7 @@ name();
 
 setTimeout(() => {
 	console.clear();
-}, 5000);
+}, 1000);
 
 console.time("tiempo");
 
