@@ -9,6 +9,7 @@
 	"author": "@Manueleitor",
 	"license": "ISC",
 	"dependencies": {
+		"express": "^4.17.1",
 		"mongodb": "^3.6.0",
 		"node-fetch": "^2.6.0"
 	},
