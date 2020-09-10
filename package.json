@@ -4,6 +4,8 @@
 	"description": "Curso de platzi con NodeJs",
 	"main": "index.js",
 	"scripts": {
+		"debug": "nodemon --trace-warnings  ./src/singlePageCounter/index.js",
+		"start": "node ./src/singlePageCounter/index.js",
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"author": "@Manueleitor",
