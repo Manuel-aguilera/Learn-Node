@@ -7,7 +7,9 @@ const router = (req, res) => {
 	switch (req.url) {
 		case "/hola":
 			res.writeHead(201, { "Content-Type": "text/plain; charset=utf-8" });
-			res.write("Hola que tal");
+			let saludo = hola();
+			console.log(`Saludo: ${saludo}`);
+			res.write(saludo);
 			res.end();
 			break;
 		default:
@@ -24,5 +26,9 @@ const router = (req, res) => {
 };
 
 http.createServer(router).listen(3000);
+
+function hola() {
+	return "Hola que tal";
+}
 
 console.log("Escuchando http en el puerto 3000");
