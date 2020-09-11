@@ -1,8 +1,5 @@
 const upcase = (strings, ...values) => {
-	return (
-		values.map((name) => name[0].toUpperCase() + name.slice(1)).join(" ") +
-		strings[2]
-	);
+	return values.map((name) => name[0].toUpperCase()).join(" ") + strings[2];
 };
 
 const person = {
